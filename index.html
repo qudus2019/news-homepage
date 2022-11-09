@@ -15,25 +15,38 @@
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
-<body class="container mx-auto p-3 pb-40">
-  <header>
+<body class="container mx-auto pb-40 overflow-x-hidden" id='body'>
+  <div class="absolute w-screen bg-black opacity-50 shadow"></div>
+  <header class="relative p-4">
     <!--Navigation bar-->
     <nav class="relative flex flex-row justify-between py-10">
       <div class="logo-wrapper w-12">
         <img src="assets/images/logo.svg" alt="logo">
       </div>
       <ul class="hidden md:flex flex-row">
-        <li class="mr-8"> <a href="#" class="hover:text-red-400 hover:cursor-pointer">Home</a> </li>
-        <li class="mr-8"> <a href="#" class="hover:text-red-400 hover:cursor-pointer">New</a> </li>
-        <li class="mr-8"> <a href="#" class="hover:text-red-400 hover:cursor-pointer">Popular</a> </li>
-        <li class="mr-8"> <a href="#" class="hover:text-red-400 hover:cursor-pointer">Trending</a> </li>
+        <li class="mr-8"> <a href="#" class="hover:text-orange-300 hover:cursor-pointer">Home</a> </li>
+        <li class="mr-8"> <a href="#" class="hover:text-orange-300 hover:cursor-pointer">New</a> </li>
+        <li class="mr-8"> <a href="#" class="hover:text-orange-300 hover:cursor-pointer">Popular</a> </li>
+        <li class="mr-8"> <a href="#" class="hover:text-orange-300 hover:cursor-pointer">Trending</a> </li>
         <li> <a href="#" class="hover:text-red-400 hover:cursor-pointer">Categories</a> </li>
       </ul>
-      <img src="assets/images/icon-menu.svg" alt="" class="w-10 h-5 md:hidden">
+      <img src="assets/images/icon-menu.svg" alt="" class="w-10 h-5 md:hidden" id="hamburger">
+    </nav>
+
+    <!--Mobile menu-->
+    <nav class="bg-white flex flex-col fixed top-0 right-0 w-3/4 h-screen p-7 text-2xl" id="mobile-nav">
+      <img src="assets/images/icon-menu-close.svg" alt="close" id='close' class="absolute top-8 right-4 w-8">
+      <ul class="flex flex-col md:hidden justify-between mt-28 h-64">
+        <li class="mr-8"> <a href="#" class="hover:text-orange-300 hover:cursor-pointer">Home</a> </li>
+        <li class="mr-8"> <a href="#" class="hover:text-orange-300 hover:cursor-pointer">New</a> </li>
+        <li class="mr-8"> <a href="#" class="hover:text-orange-300 hover:cursor-pointer">Popular</a> </li>
+        <li class="mr-8"> <a href="#" class="hover:text-orange-300 hover:cursor-pointer">Trending</a> </li>
+        <li> <a href="#" class="hover:text-orange-300 hover:cursor-pointer">Categories</a> </li>
+      </ul>
     </nav>
   </header>
 
-  <main class="grid grid-cols-1 gap-6">
+  <main class="grid grid-cols-1 gap-6 p-4">
     <!--Hero Section-->
     <section class="">
       <!--Hero Image-->
@@ -106,5 +119,18 @@
     Coded by <a href="#">Abdulqudus Sanusi</a>.
   </div>
 </footer>
+<script>
+  let hamburger = document.getElementById('hamburger');
+  let close = document.getElementById('close');
+  let body = document.getElementById('body');
+
+  hamburger.addEventListener('click',function(e){
+    body.classList.add('show');
+  });
+
+  close.addEventListener('click',function(e){
+    body.classList.remove('show');
+  })
+</script>
 </body>
 </html>
