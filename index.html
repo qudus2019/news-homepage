@@ -4,8 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | News homepage</title>
 
@@ -15,20 +18,21 @@
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
-<body class="container mx-auto pb-40 overflow-x-hidden" id='body'>
+<body class="container md:w-11/12 mx-auto pb-10 overflow-x-hidden" id='body'>
   <div class="absolute w-screen bg-black opacity-50 shadow"></div>
-  <header class="relative p-4">
+  <header class="relative px-4">
     <!--Navigation bar-->
     <nav class="relative flex flex-row justify-between py-10">
       <div class="logo-wrapper w-12">
         <img src="assets/images/logo.svg" alt="logo">
       </div>
+      <!--Desktop Menu-->
       <ul class="hidden md:flex flex-row">
-        <li class="mr-8"> <a href="#" class="hover:text-orange-300 hover:cursor-pointer">Home</a> </li>
-        <li class="mr-8"> <a href="#" class="hover:text-orange-300 hover:cursor-pointer">New</a> </li>
-        <li class="mr-8"> <a href="#" class="hover:text-orange-300 hover:cursor-pointer">Popular</a> </li>
-        <li class="mr-8"> <a href="#" class="hover:text-orange-300 hover:cursor-pointer">Trending</a> </li>
-        <li> <a href="#" class="hover:text-red-400 hover:cursor-pointer">Categories</a> </li>
+        <li class="mr-8"> <a href="#" class="hover:text-Softorange hover:cursor-pointer">Home</a> </li>
+        <li class="mr-8"> <a href="#" class="hover:text-Softorange hover:cursor-pointer">New</a> </li>
+        <li class="mr-8"> <a href="#" class="hover:text-Softorange hover:cursor-pointer">Popular</a> </li>
+        <li class="mr-8"> <a href="#" class="hover:text-Softorange hover:cursor-pointer">Trending</a> </li>
+        <li> <a href="#" class="hover:text-Softorange hover:cursor-pointer">Categories</a> </li>
       </ul>
       <img src="assets/images/icon-menu.svg" alt="" class="w-10 h-5 md:hidden" id="hamburger">
     </nav>
@@ -37,20 +41,21 @@
     <nav class="bg-white flex flex-col fixed top-0 right-0 w-3/4 h-screen p-7 text-2xl" id="mobile-nav">
       <img src="assets/images/icon-menu-close.svg" alt="close" id='close' class="absolute top-8 right-4 w-8">
       <ul class="flex flex-col md:hidden justify-between mt-28 h-64">
-        <li class="mr-8"> <a href="#" class="hover:text-orange-300 hover:cursor-pointer">Home</a> </li>
-        <li class="mr-8"> <a href="#" class="hover:text-orange-300 hover:cursor-pointer">New</a> </li>
-        <li class="mr-8"> <a href="#" class="hover:text-orange-300 hover:cursor-pointer">Popular</a> </li>
-        <li class="mr-8"> <a href="#" class="hover:text-orange-300 hover:cursor-pointer">Trending</a> </li>
-        <li> <a href="#" class="hover:text-orange-300 hover:cursor-pointer">Categories</a> </li>
+        <li class="mr-8"> <a href="#" class="hover:text-Softorange hover:cursor-pointer">Home</a> </li>
+        <li class="mr-8"> <a href="#" class="hover:text-Softorange hover:cursor-pointer">New</a> </li>
+        <li class="mr-8"> <a href="#" class="hover:text-Softorange
+        hover:cursor-pointer">Popular</a> </li>
+        <li class="mr-8"> <a href="#" class="hover:text-Softorange hover:cursor-pointer">Trending</a> </li>
+        <li> <a href="#" class="hover:text-Softorange hover:cursor-pointer">Categories</a> </li>
       </ul>
     </nav>
   </header>
 
-  <main class="grid grid-cols-1 gap-6 p-4">
+  <main class="grid grid-cols-1 md:grid-cols-3 gap-6 px-3 ">
     <!--Hero Section-->
-    <section class="">
+    <section class="md:col-span-2 ">
       <!--Hero Image-->
-      <picture>
+      <picture class="">
         <source media="min-width:650px" srcset="assets/images/image-web-3-desktop.jpg">
         <img src="assets/images/image-web-3-mobile.jpg" alt="web 3 image">
        </picture>
@@ -58,55 +63,55 @@
       <h1 class="text-4xl md:text-5xl font-bold py-4">The Bright Future of Web 3.0?</h1>
       <div>
         <p class="text-gray-500 font-semibold">We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?</p>
-        <button class="bg-red-400 px-7 py-2 text-white font-semibold mt-6 uppercase tracking-widest hover:bg-black">Read More</button>
+        <button class="bg-Softred px-7 py-2 text-white font-semibold mt-6 uppercase tracking-widest hover:bg-Verydarkblue">Read More</button>
       </div>
     </section>
 
     <!--New Section-->
-    <section>
-      <div class="bg-blue-900 p-5">
-        <h2 class='text-orange-400 font-bold text-3xl pb-6'>New</h2>
-        <div class="pb-7 border-b-2 border-gray-500">
-          <h3 class="font-bold text-white text-2xl pb-3 hover:text-orange-400">Hydrogen vs Electric Cars</h3>
-          <p class="text-gray-400">WIll hydrogen-fuelled cars ever catch up with EVs</p>
+    <section class="">
+      <div class="bg-Verydarkblue p-5">
+        <h2 class='text-Softorange font-bold text-3xl pb-6'>New</h2>
+        <div class="pb-7 border-b-2 border-Darkgrayishblue">
+          <h3 class="font-bold text-Offwhite text-2xl pb-3 hover:text-Softorange">Hydrogen vs Electric Cars</h3>
+          <p class="text-Grayishblue">WIll hydrogen-fuelled cars ever catch up with EVs</p>
         </div>
-        <div class="pt-4 pb-6 border-b-2 border-gray-500">
-          <h3 class="font-bold text-white text-2xl pb-3">The Downsides of AI Artistry</h3>
-          <p class="text-gray-400">What are the possible adverse effects of on-demand AI image generation.</p>
+        <div class="pt-4 pb-6 border-b-2 border-Darkgrayishblue">
+          <h3 class="font-bold text-white text-2xl pb-3 hover:text-Softorange">The Downsides of AI Artistry</h3>
+          <p class="text-Grayishblue">What are the possible adverse effects of on-demand AI image generation.</p>
         </div>
         <div  class="pt-4 pb-6">
-          <h3 class="font-bold text-white capitalize pb-2 text-2xl  hover:text-orange-400">is VC funding drying up ?</h3>
-          <p class="text-gray-400">WIll hydrogen-fuelled cars ever catch up with EVs</p>
+          <h3 class="font-bold text-white capitalize pb-2 text-2xl  hover:text-Softorange">is VC funding drying up ?</h3>
+          <p class="text-Grayishblue">WIll hydrogen-fuelled cars ever catch up with EVs</p>
         </div>
       </div>
 
     </section>
     <!--Third Section-->
-    <section class="mb-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div  class="flex h-36">
+    <section class="mb-8 grid grid-cols-1 md:grid-cols-3 gap-6 md:col-span-3 ">
+      <div class="flex h-36">
         <img src="assets/images/image-retro-pcs.jpg" alt=" revolving retro" class="">
         <div class=" flex flex-col justify-between pl-4 md:pl-8">
-          <h2 class="text-4xl md:text-5xl text-gray-300 font-semibold">01</h2>
-          <h3 class="text-xl md:text-2xl font-bold  hover:text-orange-400">Revolving Retro PCs</h3>
-          <p class=" text-gray-400 font-semibold">What happens when old PCs are given modern update?</p>
+          <h2 class="text-4xl text-gray-300 font-semibold">01</h2>
+          <h3 class="text-base  font-extrabold  hover:text-Softred">Revolving Retro PCs</h3>
+          <p class="text-sm md:text-base text-gray-400 font-semibold">What happens when old PCs are given modern update?</p>
         </div>
       </div>
 
       <div  class="flex h-36">
         <img src="assets/images/image-top-laptops.jpg" alt=" top laptops">
         <div class=" flex flex-col justify-between pl-4 md:pl-8">
-          <h2 class="text-4xl md:text-5xl text-gray-300 font-semibold">02</h2>
-          <h3 class="text-xl font-bold">Top 10 laptops of 2022</h3>
-          <p class=" text-gray-400 font-semibold">Our best picks for various pick and budgets.</p>
+          <h2 class="text-4xl text-gray-300 font-semibold">02</h2>
+          <h3 class="text-base font-extrabold hover:text-Softred">Top 10 laptops of 2022</h3>
+          <p class="text-sm md:text-base text-gray-400 font-semibold">Our best picks for various pick and budgets.</p>
         </div>
       </div>
 
       <div  class="flex h-36">
         <img src="assets/images/image-gaming-growth.jpg" alt="growth of gaming" class="">
         <div  class=" flex flex-col justify-between pl-4 md:pl-8">
-          <h2 class="text-4xl md:text-5xl text-gray-300 font-semibold">03</h2>
-          <h3 class="text-xl md:text-2xl font-bold">The Growth of Gaming</h3>
-          <p class="text-gray-400 font-semibold">How the pandemic has sparked fresh opportunities.</p>
+          <h2 class="text-4xl text-gray-300 font-semibold">03</h2>
+          <h3 class="text-base md:text-base font-extrabold hover:text-Softred">The Growth of Gaming</h3>
+          <p class="text-sm md:text-base text-gray-400 font-semibold">How the pandemic has sparked fresh opportunities.</p>
         </div>
       </div>
 
